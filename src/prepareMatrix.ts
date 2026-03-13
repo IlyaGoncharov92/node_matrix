@@ -30,14 +30,13 @@ export function prepareMatrix(size: number): MatrixData {
 		});
 	}
 
-	// 2. Формируем данные. Теперь проверяем каждую строку на наличие globalMin
+	// 2. Формируем данные. Проверяем каждую строку на наличие globalMin
 	const rows: RowAnalysis[] = matrix.map((row) => {
 		const positives = row.filter(n => n > 0);
 		return {
 			row,
 			minPositive: positives.length > 0 ? Math.min(...positives) : null,
 			replacements: minReplacements(row),
-			// КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: проверяем, есть ли минимум в этой конкретной строке
 			isGlobalMinRow: row.includes(globalMin)
 		};
 	});

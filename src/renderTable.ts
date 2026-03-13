@@ -19,5 +19,5 @@ export function renderTable(data: MatrixData): void {
 	});
 
 	console.log('-'.repeat(15 + size * 5 + 15));
-	console.log(`* — Строка содержит глобальный минимум (${globalMin})`);
+	console.log(`* — Row contains a global minimum: (${globalMin})`);
 }
