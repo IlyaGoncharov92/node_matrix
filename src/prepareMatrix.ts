@@ -20,7 +20,7 @@ export function prepareMatrix(size: number): MatrixData {
 
 	// 1. Генерируем матрицу и находим значение глобального минимума
 	for (let i = 0; i < size; i++) {
-		const row = Array.from({ length: size }, () => rnd(-10, 10));
+		const row = Array.from({ length: size }, () => rnd(-100, 100));
 		matrix.push(row);
 
 		row.forEach(val => {
