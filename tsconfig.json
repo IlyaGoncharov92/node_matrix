@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2022",                     // Современный JS
+    "module": "commonjs",                   // Модульная система Node.js
+    "rootDir": "src",                       // Исходники будут здесь
+    "outDir": "dist",                       // Компилятор будет класть сюда .js-файлы
+    "strict": true,                         // Включить строгую типизацию
+    "esModuleInterop": true,                // нужен для совместимости с пакетами CommonJS
+    "skipLibCheck": true
+  }
+}
